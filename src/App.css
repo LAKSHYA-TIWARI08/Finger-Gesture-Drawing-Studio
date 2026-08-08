@@ -1,0 +1,6 @@
+body{font-family:Arial;text-align:center;background:#eee}
+.app{padding:20px}
+.toolbar{background:white;padding:15px;border-radius:10px;margin:20px}
+.camera{position:relative;width:640px;height:480px;margin:auto;border:3px solid black}
+video,canvas{position:absolute;left:0;top:0;transform:scaleX(-1)}
+.info{font-size:18px}
