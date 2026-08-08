@@ -13,7 +13,7 @@ Designed & Developed by **Lakshya Tiwari & team**.
 - **🤟 Quick Tool & Palette Cycle**: Switch colors dynamically using three-finger gesture.
 - **🖐 Emoji Stamping Mode**: Stamp selected emojis directly onto the canvas at fingertip position.
 - **✊ Fist Canvas Eraser**: Clear the entire canvas with a simple fist gesture.
-- **👍 Thumbs Up Export**: Instant PNG artwork download triggered by thumbs up gesture.
+- **👍 Thumbs Up Save**: Save artwork directly to Local Gallery using thumbs up gesture.
 - **🎨 Advanced Brush Engine**: Normal Brush, Pencil, Marker, and Neon Glow styles with adjustable size & opacity sliders.
 - **🖼️ Local Gallery & Auto-Save**: Persistent artwork storage in LocalStorage.
 - **⌨️ Shortcuts & Dark/Light Mode**: Full keyboard accessibility and studio color themes.

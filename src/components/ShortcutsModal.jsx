@@ -6,7 +6,7 @@ export default function ShortcutsModal({ isOpen, onClose }) {
   const shortcuts = [
     { key: "Ctrl + Z", action: "Undo last stroke" },
     { key: "Ctrl + Y", action: "Redo stroke" },
-    { key: "Ctrl + S", action: "Export PNG artwork" },
+    { key: "Ctrl + S", action: "Save drawing to Gallery" },
     { key: "C", action: "Clear canvas" },
     { key: "1", action: "Free Drawing Mode" },
     { key: "2", action: "Shape Creator Mode" },

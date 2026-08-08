@@ -114,14 +114,8 @@ export default function App() {
     if (!canvasRef.current) return;
     const dataUrl = canvasRef.current.toDataURL("image/png");
 
-    // Save to LocalStorage gallery
+    // Save to LocalStorage gallery (File download feature disabled)
     saveToGallery(dataUrl);
-
-    // Download PNG file
-    const link = document.createElement("a");
-    link.download = `gesture_art_${Date.now()}.png`;
-    link.href = dataUrl;
-    link.click();
   }, []);
 
   const handleLoadSavedImage = useCallback((dataUrl) => {

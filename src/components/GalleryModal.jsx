@@ -31,7 +31,7 @@ export default function GalleryModal({ isOpen, onClose, onLoadSavedImage }) {
             <p style={{ fontSize: "2rem" }}>🎨</p>
             <p style={{ marginTop: "0.5rem", fontWeight: 600 }}>No saved drawings yet</p>
             <p style={{ fontSize: "0.8rem", opacity: 0.8 }}>
-              Use Export PNG or the 👍 Thumbs Up gesture to save your creations!
+              Use Save to Gallery or the 👍 Thumbs Up gesture to save your creations!
             </p>
           </div>
         ) : (

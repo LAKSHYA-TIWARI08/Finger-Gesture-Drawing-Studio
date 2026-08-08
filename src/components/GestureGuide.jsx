@@ -35,8 +35,8 @@ const GUIDE_ITEMS = [
   {
     gesture: GESTURES.THUMBS_UP,
     title: "👍 Thumbs Up",
-    action: "Export Artwork",
-    desc: "Give a thumbs up to save PNG artwork."
+    action: "Save to Gallery",
+    desc: "Give a thumbs up to save artwork to gallery."
   }
 ];
 

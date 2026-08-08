@@ -16,7 +16,7 @@ export const GESTURES = {
   THREE_FINGERS: { id: "THREE_FINGERS", name: "Change Tool", icon: "🤟", mode: "switch", desc: "Switch drawing options." },
   OPEN_PALM: { id: "OPEN_PALM", name: "Emoji Mode", icon: "🖐", mode: "emoji", desc: "Place emojis." },
   FIST: { id: "FIST", name: "Clear Canvas", icon: "✊", mode: "clear", desc: "Erase everything." },
-  THUMBS_UP: { id: "THUMBS_UP", name: "Save Drawing", icon: "👍", mode: "save", desc: "Download artwork." },
+  THUMBS_UP: { id: "THUMBS_UP", name: "Save Drawing", icon: "👍", mode: "save", desc: "Save to gallery." },
   NONE: { id: "NONE", name: "Searching Hand", icon: "✋", mode: "none", desc: "Show your hand to start." }
 };
 

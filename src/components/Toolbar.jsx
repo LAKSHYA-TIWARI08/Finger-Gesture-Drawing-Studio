@@ -235,7 +235,7 @@ export default function Toolbar({
           style={{ width: "100%", marginTop: "0.4rem" }}
           onClick={onSave}
         >
-          💾 Export PNG
+          💾 Save to Gallery
         </button>
       </div>
     </aside>
