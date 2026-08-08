@@ -1,5 +1,27 @@
 import { useEffect, useState, useRef } from "react";
-import { Hands } from "@mediapipe/hands";
+import * as mpHands from "@mediapipe/hands";
+
+/**
+ * Resolves MediaPipe Hands constructor reliably across dev and production Vite builds
+ */
+function getHandsConstructor() {
+  if (typeof window !== "undefined" && typeof window.Hands === "function") {
+    return window.Hands;
+  }
+  if (typeof mpHands.Hands === "function") {
+    return mpHands.Hands;
+  }
+  if (mpHands.default && typeof mpHands.default.Hands === "function") {
+    return mpHands.default.Hands;
+  }
+  if (mpHands.default && typeof mpHands.default === "function") {
+    return mpHands.default;
+  }
+  if (typeof mpHands === "function") {
+    return mpHands;
+  }
+  return null;
+}
 
 /**
  * Custom React Hook for MediaPipe Hands webcam tracking
@@ -13,7 +35,6 @@ export function useHandTracking(videoRef, onResultsCallback) {
   const animFrameIdRef = useRef(null);
   const callbackRef = useRef(onResultsCallback);
 
-  // Keep callback reference updated without triggering re-initialization loop
   useEffect(() => {
     callbackRef.current = onResultsCallback;
   }, [onResultsCallback]);
@@ -45,8 +66,14 @@ export function useHandTracking(videoRef, onResultsCallback) {
           });
         }
 
+        // Get safe Hands constructor
+        const HandsClass = getHandsConstructor();
+        if (!HandsClass) {
+          throw new Error("MediaPipe Hands library failed to load.");
+        }
+
         // Initialize MediaPipe Hands
-        const hands = new Hands({
+        const hands = new HandsClass({
           locateFile: (file) => `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`
         });
 
